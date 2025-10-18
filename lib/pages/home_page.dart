@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:excel/excel.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:open_filex/open_filex.dart';
@@ -143,6 +144,55 @@ class HomePage extends StatelessWidget {
     }
   }
 
+  // EXPORTAR A EXCEL
+  void exportExcel() async {
+    // Crear el libro de excel
+    var excel = Excel.createExcel(); //crear un archivo excel vacio
+
+    // Obteniendo la hoja activa o crear una nueva hoja
+    Sheet sheet = excel["MiHoja"];
+
+    // Agregamos datos a la celdas
+    sheet.cell(CellIndex.indexByString("A1")).value = TextCellValue("NOMBRE");
+    sheet.cell(CellIndex.indexByColumnRow(columnIndex: 1, rowIndex: 0)).value =
+        TextCellValue("EDAD");
+    sheet.cell(CellIndex.indexByString("C1")).value = TextCellValue("PAÍS");
+
+    // Agregando filas dinámicamente
+    List<List<dynamic>> data = [
+      ["Carlos", "25", "Perú"],
+      ["Mathias", "32", "Mexico"],
+      ["Isaías", "65", "España"],
+    ];
+
+    for (int i = 0; i < data.length; i++) {
+      for (int j = 0; j < data[i].length; j++) {
+        print(data[i][j]);
+        sheet
+            .cell(CellIndex.indexByColumnRow(columnIndex: j, rowIndex: i + 1))
+            .value = TextCellValue(
+          data[i][j].toString(),
+        );
+      }
+    }
+
+    // gUARDAR EL EXCEL
+    var bytes = excel.encode();
+
+    // Obtengo el directorio de almancenmiento
+    Directory? directory = await getExternalStorageDirectory();
+    String filePath = "${directory!.path}/reporte.xlsx";
+
+    // Guardar archivo
+    File(filePath)
+      ..createSync(recursive: true)
+      ..writeAsBytes(bytes!);
+    print("Archivo guardado en $filePath");
+
+    OpenResult result = await OpenFilex.open(filePath);
+    print("Estado de apertura: $result");
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -171,6 +221,12 @@ class HomePage extends StatelessWidget {
                 openPdfFile(pdfFile);
               },
               child: Text("Exportar a pdf con imágen "),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                exportExcel();
+              },
+              child: Text("Exportar a excel"),
             ),
           ],
         ),
