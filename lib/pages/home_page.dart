@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:pdf/pdf.dart';
 import 'package:pdf/widgets.dart' as pw;
@@ -86,6 +87,51 @@ class HomePage extends StatelessWidget {
     return file;
   }
 
+  Future<File> generarPdfConImagen() async {
+    final pdf = pw.Document();
+    final image = pw.MemoryImage(
+      (await rootBundle.load("assets/images/peru.jpeg")).buffer.asUint8List(),
+    );
+
+    pdf.addPage(
+      pw.Page(
+        build: (pw.Context context) {
+          return pw.Center(
+            child: pw.Column(
+              children: [
+                pw.Text(
+                  "PDF CON IMÁGEN",
+                  style: pw.TextStyle(
+                    fontSize: 30,
+                    fontWeight: pw.FontWeight.bold,
+                  ),
+                ),
+                pw.SizedBox(height: 32),
+                pw.Text(
+                  "Ejemplo de parrado para el pdf con imágenes",
+                  style: pw.TextStyle(color: PdfColors.blue),
+                ),
+                pw.SizedBox(height: 32),
+                pw.Image(image, width: 300, height: 300, fit: pw.BoxFit.cover),
+              ],
+            ),
+          );
+        },
+      ),
+    );
+    // Obtener la ruta de almacenamiento local
+    final output = await getApplicationDocumentsDirectory();
+
+    // Uso path para generar correctamente la ruta
+    final filePath = path.join(output.path, "example_imagen.pdf");
+    final file = File(filePath);
+
+    // Guardar el archivo
+    await file.writeAsBytes(await pdf.save());
+    print("pdf guardado en ${file.path}");
+    return file;
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -105,6 +151,12 @@ class HomePage extends StatelessWidget {
                 generarTablaPdf();
               },
               child: Text("Exportar a pdf con tabla "),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                generarPdfConImagen();
+              },
+              child: Text("Exportar a pdf con imágen "),
             ),
           ],
         ),
