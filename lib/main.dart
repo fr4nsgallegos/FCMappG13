@@ -8,5 +8,5 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   await NotificationService.initMessaging();
-  runApp(MaterialApp(home: HomePage()));
+  runApp(MaterialApp(home: HomePage(), debugShowCheckedModeBanner: false));
 }
