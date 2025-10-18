@@ -13,6 +13,12 @@ class NotificationService {
     FirebaseMessaging.onBackgroundMessage(_onBackgroundMessage);
   }
 
+  // Suscribir a topic
+  Future<void> suscribeToTopic(String topic) async {
+    await firebaseMessaging.subscribeToTopic(topic);
+    print("Dispositivo suscrito a el topic: $topic");
+  }
+
   // Obtener info cuando el app esta abierto
   static _onMessage(RemoteMessage message) {
     print("*******************************");
@@ -20,6 +26,14 @@ class NotificationService {
     print(message.notification!.title);
     print(message.notification!.body);
     print("*******************************");
+
+    if (message.data.isNotEmpty) {
+      print("/*/*/*/***/*/**/*/*/*/*/*/*/*/*/*/*/");
+      print("Datos: ${message.data}");
+      print("Data1: ${message.data["data1"]}");
+      print("Data2: ${message.data["data2"]}");
+      print("/*/*/*/***/*/**/*/*/*/*/*/*/*/*/*/*/");
+    }
   }
 
   // Obtener cuando este en segundo plano
