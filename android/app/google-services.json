@@ -1,0 +1,206 @@
+{
+  "project_info": {
+    "project_number": "139574129569",
+    "project_id": "groupg13-62598",
+    "storage_bucket": "groupg13-62598.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:139574129569:android:3a9feb31a3437bfd5ed1e0",
+        "android_client_info": {
+          "package_name": "com.g13.fcmappg13"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "139574129569-n71go8roamrm8e7vqfo6r37646q58463.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBvcaerUH_teMBwh1LhZzcU3tSTL131o8I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "139574129569-n71go8roamrm8e7vqfo6r37646q58463.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "139574129569-4olf4tvj8jolhjldmq80l7ot3t9u9an2.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.g13.firebaecone2g13"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:139574129569:android:386e554ab74893285ed1e0",
+        "android_client_info": {
+          "package_name": "com.g13.firebaecone2g13"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "139574129569-n71go8roamrm8e7vqfo6r37646q58463.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBvcaerUH_teMBwh1LhZzcU3tSTL131o8I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "139574129569-n71go8roamrm8e7vqfo6r37646q58463.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "139574129569-4olf4tvj8jolhjldmq80l7ot3t9u9an2.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.g13.firebaecone2g13"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:139574129569:android:8bd1accef7161f0c5ed1e0",
+        "android_client_info": {
+          "package_name": "com.g13.firebaseconng13"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "139574129569-n71go8roamrm8e7vqfo6r37646q58463.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBvcaerUH_teMBwh1LhZzcU3tSTL131o8I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "139574129569-n71go8roamrm8e7vqfo6r37646q58463.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "139574129569-4olf4tvj8jolhjldmq80l7ot3t9u9an2.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.g13.firebaecone2g13"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:139574129569:android:d6fb8e3392a175ed5ed1e0",
+        "android_client_info": {
+          "package_name": "com.g13app.votacionesappg13"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "139574129569-gt8s7jsepanv3unjouref02qbp13ufdb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.g13app.votacionesappg13",
+            "certificate_hash": "45135d3bf1093838c55e611223392f3da7f50306"
+          }
+        },
+        {
+          "client_id": "139574129569-m4btskasqjm973p25peenk9dl04vt63m.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.g13app.votacionesappg13",
+            "certificate_hash": "e9d8fc54f5ab03034c330da18d2460461889035e"
+          }
+        },
+        {
+          "client_id": "139574129569-n71go8roamrm8e7vqfo6r37646q58463.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBvcaerUH_teMBwh1LhZzcU3tSTL131o8I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "139574129569-n71go8roamrm8e7vqfo6r37646q58463.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "139574129569-4olf4tvj8jolhjldmq80l7ot3t9u9an2.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.g13.firebaecone2g13"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:139574129569:android:d9f48ac68c46e1ce5ed1e0",
+        "android_client_info": {
+          "package_name": "com.pruebag13.firebaseconectiong13"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "139574129569-n71go8roamrm8e7vqfo6r37646q58463.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBvcaerUH_teMBwh1LhZzcU3tSTL131o8I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "139574129569-n71go8roamrm8e7vqfo6r37646q58463.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "139574129569-4olf4tvj8jolhjldmq80l7ot3t9u9an2.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.g13.firebaecone2g13"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
