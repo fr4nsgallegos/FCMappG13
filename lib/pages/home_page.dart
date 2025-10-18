@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:open_filex/open_filex.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:pdf/pdf.dart';
 import 'package:pdf/widgets.dart' as pw;
@@ -132,6 +133,16 @@ class HomePage extends StatelessWidget {
     return file;
   }
 
+  void openPdfFile(File filePdf) async {
+    try {
+      print("Intentando abrir el archivo pdf");
+      final result = await OpenFilex.open(filePdf.path);
+      print("Resultado al abrir: $result");
+    } catch (e) {
+      print("Errrorrrr: $e");
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -141,20 +152,23 @@ class HomePage extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             ElevatedButton(
-              onPressed: () {
-                generarPdf();
+              onPressed: () async {
+                final pdfFile = await generarPdf();
+                openPdfFile(pdfFile);
               },
               child: Text("Exportar a pdf"),
             ),
             ElevatedButton(
-              onPressed: () {
-                generarTablaPdf();
+              onPressed: () async {
+                final pdfFile = await generarTablaPdf();
+                openPdfFile(pdfFile);
               },
               child: Text("Exportar a pdf con tabla "),
             ),
             ElevatedButton(
-              onPressed: () {
-                generarPdfConImagen();
+              onPressed: () async {
+                final pdfFile = await generarPdfConImagen();
+                openPdfFile(pdfFile);
               },
               child: Text("Exportar a pdf con imágen "),
             ),
